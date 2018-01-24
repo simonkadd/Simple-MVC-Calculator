@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model SimpleCalculator.Models.Maths1
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <br />
+            <p>first number integer</p>
+            @Html.EditorFor(m => m.num1);
+    <br /><br />
+            <p>second number integer</p>
+            @Html.EditorFor(m => m.num2);
+    <br /><br />
+            <p>+ - * /</p>
+            @Html.EditorFor(m => m.ops);
+    <br /><br />
+            <p>result</p>
+            @Html.DisplayFor(m => m.result);
+    <br />
+            @Html.DisplayFor(m => m.error);
+
+    <br /><br />
+            <input type="submit" value="Calculate" />
+
+}
